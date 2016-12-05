@@ -1,3 +1,8 @@
+# 数据格式
+protobuf-to-dict 
+protobuf 
+
+
 # 爬虫框架
 Scrapy
 
@@ -11,9 +16,12 @@ lxml
 MySQL-python
 thrift
 kafka
+redis
 
 # 数据处理
 pytz
+
+
 
 
 

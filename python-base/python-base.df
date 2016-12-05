@@ -1,17 +1,22 @@
 # from docker hub python:2.7.12-slim
 FROM python@sha256:f8763014855f9bad3607d9309a248439052d2d4a000ace3f207a2df63a83f238
+CMD ["/bin/bash"]
+
 # 修改apt-get 镜像源
 RUN echo "deb http://mirrors.aliyun.com/debian/ jessie main non-free contrib\ndeb http://mirrors.aliyun.com/debian/ jessie-proposed-updates main non-free contrib\ndeb-src http://mirrors.aliyun.com/debian/ jessie main non-free contrib\ndeb-src http://mirrors.aliyun.com/debian/ jessie-proposed-updates main non-free contrib" > /etc/apt/sources.list
 
 # 安装pip，修改国内修改镜像源
 RUN mkdir -p ~/.pip/ && echo "[global]\nindex-url=http://mirrors.aliyun.com/pypi/simple/ \n[install] \ntrusted-host=mirrors.aliyun.com" > ~/.pip/pip.conf
 
-# 注入requirements.txt  --> /usr/src/app
-# 安装应用程序依赖包
+# 工作目录
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-ONBUILD COPY requirements.txt /usr/src/app/
+# 注入requirements.txt  --> /usr/src/app
+# 安装应用程序依赖包
+ONBUILD COPY . /usr/src/app/
 ONBUILD RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python2"]
 
 

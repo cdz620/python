@@ -1,0 +1,41 @@
+# 基础包
+pyOpenSSL 
+setuptools 
+
+
+# 辅助工具
+pytz 
+requests 
+httpie 
+bpython 
+psutil 
+
+# ssh 脚本
+sshed 
+cryptography 
+paramiko 
+
+
+# 后端
+kafka 
+MySQL-python 
+redis 
+SQLAlchemy 
+thrift  
+
+# web
+web.py 
+
+# 邮件
+mailthon 
+
+# 爬虫相关
+lxml 
+protobuf 
+protobuf-to-dict 
+zope.interface 
+Twisted  
+Scrapy 
+
+
+
