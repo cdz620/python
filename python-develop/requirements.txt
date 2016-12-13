@@ -24,7 +24,7 @@ SQLAlchemy
 thrift  
 
 # web
-web.py 
+#web.py 
 
 # 邮件
 mailthon 
@@ -32,7 +32,7 @@ mailthon
 # 爬虫相关
 lxml 
 protobuf 
-protobuf-to-dict 
+#protobuf-to-dict 
 zope.interface 
 Twisted  
 Scrapy 
