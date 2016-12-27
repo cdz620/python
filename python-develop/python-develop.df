@@ -1,3 +1,4 @@
 # docker build -t python:local_develop -f python-develop.df .
 FROM cdz620/python:base
+ENV SCRAPY_PYTHON_SHELL=bpython
 CMD ["python2"]
