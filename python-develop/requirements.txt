@@ -9,6 +9,7 @@ requests
 httpie 
 bpython 
 psutil 
+python-dateutil
 
 # ssh 脚本
 sshed 
